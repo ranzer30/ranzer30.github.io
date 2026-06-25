@@ -1,0 +1,21 @@
+title: "Runzhe Gu"
+description: "Runzhe Gu's academic personal homepage."
+lang: en
+markdown: kramdown
+permalink: pretty
+
+# This site is intentionally one page only. Keep content in _data/profile.yml.
+plugins: []
+collections: {}
+
+# Ignore unrelated local research/poster assets when GitHub Pages builds the site.
+exclude:
+  - BGU_Poster_Template
+  - "slides template"
+  - BGU_Poster_Template.zip
+  - "slides template.zip"
+  - LLM_rank_inference.pdf
+  - LLM_rank_inference.txt
+  - "Online Conformal Prediction via Universal Portfolio Algorithms.pdf"
+  - serpant_icml_poster.pdf
+  - ICML-logo.svg

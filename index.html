@@ -1,0 +1,146 @@
+---
+---
+{% assign profile = site.data.profile %}
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <title>{{ profile.name | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro{% unless profile.profile_photo %} no-photo{% endunless %}" id="about">
+        <div class="intro-copy">
+          {% if profile.affiliation %}
+          <p class="affiliation">{{ profile.affiliation }}</p>
+          {% endif %}
+          <h1>{{ profile.name }}</h1>
+          {% if profile.title %}
+          <p class="role">{{ profile.title }}</p>
+          {% endif %}
+
+          {% for paragraph in profile.bio %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+
+          {% if profile.research_interests %}
+          <p><strong>Research interests:</strong> {{ profile.research_interests }}</p>
+          {% endif %}
+
+          {% if profile.links %}
+          <ul class="inline-links" aria-label="Profile links">
+            {% for link in profile.links %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+
+        {% if profile.profile_photo %}
+        <figure class="profile-photo">
+          <img src="{{ profile.profile_photo | relative_url }}" alt="{{ profile.name }} profile photo">
+          {% if profile.photo_caption %}
+          <figcaption>{{ profile.photo_caption }}</figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+      </header>
+
+      {% if profile.education %}
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <ul class="simple-list">
+          {% for item in profile.education %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if profile.research %}
+      <section aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+        <ul class="simple-list">
+          {% for item in profile.research %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if profile.publications %}
+      <section aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
+        <ol class="publication-list">
+          {% for paper in profile.publications %}
+          <li>
+            <p class="publication-title">{{ paper.title }}</p>
+            {% if paper.authors %}
+            <p class="publication-authors">{{ paper.authors }}</p>
+            {% endif %}
+            <p class="publication-meta">
+              {% if paper.venue %}<span>{{ paper.venue }}</span>{% endif %}
+              {% if paper.year %}<span>{{ paper.year }}</span>{% endif %}
+            </p>
+            {% if paper.links and paper.links.size > 0 %}
+            <p class="publication-links">
+              {% for link in paper.links %}
+              {% if link.url %}
+              <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
+              {% else %}
+              <a href="{{ link }}">link</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
+              {% endif %}
+              {% endfor %}
+            </p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+
+      {% if profile.teaching %}
+      <section aria-labelledby="teaching-heading">
+        <h2 id="teaching-heading">Teaching</h2>
+        <ul class="simple-list">
+          {% for item in profile.teaching %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if profile.awards %}
+      <section aria-labelledby="awards-heading">
+        <h2 id="awards-heading">Awards</h2>
+        <ul class="simple-list">
+          {% for item in profile.awards %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if profile.contact %}
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <ul class="contact-list">
+          {% for item in profile.contact %}
+          <li>
+            <span>{{ item.label }}:</span>
+            {% if item.url %}
+            <a href="{{ item.url }}">{{ item.value }}</a>
+            {% else %}
+            {{ item.value }}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </main>
+  </body>
+</html>

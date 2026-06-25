@@ -1,0 +1,36 @@
+# Edit this file to update the homepage content.
+
+name: "Runzhe Gu"
+title: "Ph.D. Student"
+affiliation: "School of Mathematical Science and Center for Data Science, Zhejiang University"
+profile_photo: ""
+photo_caption: ""
+
+bio:
+  - 'I am a Ph.D. student in the School of Mathematical Science and Center for Data Science at Zhejiang University, fortunate to be advised by <a href="https://wenguangsun.github.io/">Dr. Wenguang Sun</a> and <a href="https://xintaox.github.io/">Dr. Xintao Xia</a>. I received my B.S. in Statistics at Zhejiang University.'
+  - "My current research focuses on Online statistical inference, Conformal inference, and reliable evaluation/alignment of large language models."
+
+education:
+  - "Ph.D. in Mathematics, Zhejiang University, 2024-present"
+  - "B.S. in Statistics, Zhejiang University, 2020-2024"
+
+publications:
+  - title: "Anytime-Valid Inference for Online Ranking of Large Language Models."
+    authors: "<strong>Runzhe Gu</strong>, Wenguang Sun, Bowen Gang, and Xintao Xia."
+    venue: "ICML"
+    year: "2026"
+    links:
+      - label: "paper"
+        url: "https://icml.cc/virtual/2026/poster/66048"
+
+teaching:
+  - "Teaching Assistant, Stochastic Process, 2024."
+  - "Teaching Assistant, Asymptotic Statistics, 2026."
+
+awards:
+  - "Outstanding Graduate of Zhejiang University, 2024."
+
+contact:
+  - label: "Email"
+    value: "runzhegu@gmail.com"
+    url: "mailto:runzhegu@gmail.com"
