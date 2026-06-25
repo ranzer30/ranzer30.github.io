@@ -8,7 +8,7 @@ photo_caption: ""
 
 bio:
   - 'I am a Ph.D. student in the School of Mathematical Science and Center for Data Science at Zhejiang University, fortunate to be advised by <a href="https://wenguangsun.github.io/">Dr. Wenguang Sun</a> and <a href="https://xintaox.github.io/">Dr. Xintao Xia</a>. I received my B.S. in Statistics at Zhejiang University.'
-  - "My current research focuses on Online statistical inference, Conformal inference, and reliable evaluation/alignment of large language models."
+  - "My current research focuses on online statistical inference, conformal inference, and reliable evaluation/alignment of large language models."
 
 education:
   - "Ph.D. in Mathematics, Zhejiang University, 2024-present"

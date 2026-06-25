@@ -67,8 +67,8 @@ h1 {
 
 h2 {
   margin: 24px 0 8px;
-  padding-bottom: 0;
-  border-bottom: 0;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--border);
   font-size: 1.35rem;
   line-height: 1.2;
   font-weight: 700;
@@ -80,10 +80,6 @@ p {
 
 section {
   margin-top: 0;
-  border-top: 0;
-}
-
-#education-heading {
   border-top: 0;
 }
 
@@ -142,8 +138,7 @@ section {
 }
 
 .publication-authors,
-.publication-meta,
-.publication-links {
+.publication-meta {
   margin-bottom: 2px;
 }
 
@@ -157,15 +152,6 @@ section {
 
 .publication-meta span + span::before {
   content: ", ";
-}
-
-.publication-links {
-  font-size: 1rem;
-}
-
-.publication-links span {
-  margin: 0 6px;
-  color: var(--muted);
 }
 
 .contact-list span {

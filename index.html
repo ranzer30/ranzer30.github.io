@@ -70,8 +70,15 @@
         <h2 id="publications-heading">Publications</h2>
         <ol class="publication-list">
           {% for paper in profile.publications %}
+          {% assign primary_link = paper.links | first %}
           <li>
-            <p class="publication-title">{{ paper.title }}</p>
+            <p class="publication-title">
+              {% if primary_link.url %}
+              <a href="{{ primary_link.url }}">{{ paper.title }}</a>
+              {% else %}
+              {{ paper.title }}
+              {% endif %}
+            </p>
             {% if paper.authors %}
             <p class="publication-authors">{{ paper.authors }}</p>
             {% endif %}
@@ -79,17 +86,6 @@
               {% if paper.venue %}<span>{{ paper.venue }}</span>{% endif %}
               {% if paper.year %}<span>{{ paper.year }}</span>{% endif %}
             </p>
-            {% if paper.links and paper.links.size > 0 %}
-            <p class="publication-links">
-              {% for link in paper.links %}
-              {% if link.url %}
-              <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
-              {% else %}
-              <a href="{{ link }}">link</a>{% unless forloop.last %}<span aria-hidden="true">/</span>{% endunless %}
-              {% endif %}
-              {% endfor %}
-            </p>
-            {% endif %}
           </li>
           {% endfor %}
         </ol>
