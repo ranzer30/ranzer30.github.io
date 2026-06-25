@@ -14,13 +14,7 @@
     <main class="page">
       <header class="intro{% unless profile.profile_photo %} no-photo{% endunless %}" id="about">
         <div class="intro-copy">
-          {% if profile.affiliation %}
-          <p class="affiliation">{{ profile.affiliation }}</p>
-          {% endif %}
           <h1>{{ profile.name }}</h1>
-          {% if profile.title %}
-          <p class="role">{{ profile.title }}</p>
-          {% endif %}
 
           {% for paragraph in profile.bio %}
           <p>{{ paragraph }}</p>

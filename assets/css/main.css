@@ -1,9 +1,9 @@
 :root {
-  --text: #222;
-  --muted: #555;
-  --border: #d9d9d9;
+  --text: #111;
+  --muted: #444;
+  --border: #e2e2e2;
   --link: #0645ad;
-  --page-width: 900px;
+  --page-width: 980px;
 }
 
 * {
@@ -13,9 +13,9 @@
 html {
   color: var(--text);
   background: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.55;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.45;
 }
 
 body {
@@ -36,26 +36,19 @@ a:focus {
   width: calc(100% - 32px);
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 48px 0 64px;
+  padding: 30px 0 56px;
 }
 
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 38px;
   align-items: start;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
 }
 
 .intro.no-photo {
   grid-template-columns: 1fr;
-}
-
-.affiliation {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.95rem;
 }
 
 h1,
@@ -65,28 +58,23 @@ p {
 }
 
 h1 {
-  margin-bottom: 6px;
-  font-size: 2.1rem;
+  margin-bottom: 18px;
+  font-size: 2rem;
   line-height: 1.15;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 h2 {
-  margin: 34px 0 12px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--border);
-  font-size: 1.2rem;
-  line-height: 1.25;
-  font-weight: 650;
+  margin: 28px 0 10px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 p {
   margin-bottom: 12px;
-}
-
-.role {
-  margin-bottom: 18px;
-  color: var(--muted);
 }
 
 .inline-links,
@@ -111,11 +99,11 @@ p {
 
 .profile-photo img {
   display: block;
-  width: 180px;
-  height: 220px;
+  width: 210px;
+  height: 276px;
   object-fit: cover;
-  border: 1px solid var(--border);
-  background: #f5f5f5;
+  border: 0;
+  background: #fff;
 }
 
 .profile-photo figcaption {
@@ -126,7 +114,7 @@ p {
 
 .simple-list li,
 .contact-list li {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .publication-list {
@@ -135,12 +123,12 @@ p {
 }
 
 .publication-list li {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .publication-title {
   margin-bottom: 2px;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .publication-authors,
@@ -162,7 +150,7 @@ p {
 }
 
 .publication-links {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .publication-links span {
@@ -181,7 +169,7 @@ p {
 
   .page {
     width: calc(100% - 24px);
-    padding-top: 28px;
+    padding-top: 24px;
   }
 
   .intro {
@@ -194,8 +182,8 @@ p {
   }
 
   .profile-photo img {
-    width: 160px;
-    height: 196px;
+    width: 190px;
+    height: 250px;
     margin: 0 auto;
   }
 
