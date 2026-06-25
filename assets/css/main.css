@@ -68,10 +68,10 @@ h1 {
 h2 {
   display: block;
   width: 100%;
-  margin: 24px 0 10px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ddd;
-  font-size: 1.35rem;
+  margin: 28px 0 12px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.45rem;
   line-height: 1.2;
   font-weight: 700;
 }
