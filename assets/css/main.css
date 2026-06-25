@@ -66,9 +66,11 @@ h1 {
 }
 
 h2 {
-  margin: 24px 0 8px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid var(--border);
+  display: block;
+  width: 100%;
+  margin: 24px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
   font-size: 1.35rem;
   line-height: 1.2;
   font-weight: 700;
@@ -137,21 +139,12 @@ section {
   font-weight: 400;
 }
 
-.publication-authors,
-.publication-meta {
+.publication-authors {
   margin-bottom: 2px;
 }
 
 .publication-authors {
   color: var(--text);
-}
-
-.publication-meta {
-  color: var(--muted);
-}
-
-.publication-meta span + span::before {
-  content: ", ";
 }
 
 .contact-list span {

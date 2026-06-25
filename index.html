@@ -80,12 +80,11 @@
               {% endif %}
             </p>
             {% if paper.authors %}
-            <p class="publication-authors">{{ paper.authors }}</p>
-            {% endif %}
-            <p class="publication-meta">
-              {% if paper.venue %}<span>{{ paper.venue }}</span>{% endif %}
-              {% if paper.year %}<span>{{ paper.year }}</span>{% endif %}
+            <p class="publication-authors">
+              {{ paper.authors }}
+              {% if paper.venue %} {{ paper.venue }}{% endif %}{% if paper.year %} {{ paper.year }}{% endif %}{% if paper.venue or paper.year %}.{% endif %}
             </p>
+            {% endif %}
           </li>
           {% endfor %}
         </ol>
