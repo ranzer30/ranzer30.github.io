@@ -1,9 +1,9 @@
 :root {
-  --text: #111;
+  --text: #000;
   --muted: #444;
   --border: #e2e2e2;
   --link: #0645ad;
-  --page-width: 980px;
+  --page-width: 960px;
 }
 
 * {
@@ -13,9 +13,9 @@
 html {
   color: var(--text);
   background: #fff;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
-  line-height: 1.45;
+  line-height: 1.42;
 }
 
 body {
@@ -44,7 +44,8 @@ a:focus {
   grid-template-columns: minmax(0, 1fr) 210px;
   gap: 38px;
   align-items: start;
-  padding-bottom: 10px;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .intro.no-photo {
@@ -65,7 +66,7 @@ h1 {
 }
 
 h2 {
-  margin: 28px 0 10px;
+  margin: 24px 0 8px;
   padding-bottom: 0;
   border-bottom: 0;
   font-size: 1.35rem;
@@ -74,7 +75,16 @@ h2 {
 }
 
 p {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 0;
+  border-top: 0;
+}
+
+#education-heading {
+  border-top: 0;
 }
 
 .inline-links,
